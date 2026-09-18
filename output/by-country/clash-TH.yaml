@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇭 TH 01 - xiaohe
-  type: vless
-  server: log.bpminecraft.com
-  port: 8880
-  uuid: ad85a1ce-3519-4634-9ea1-66c60d3694ba
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /pyip=proxyip.sg.cmliussss.net
-    headers:
-      Host: little-pond-8731.81-68e.workers.dev
-- name: 🇹🇭 TH 02 - xiaohe
   type: vmess
   server: 118.193.57.167
   port: 49667
@@ -38,13 +25,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇹🇭 TH 01 - xiaohe
-  - 🇹🇭 TH 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇹🇭 TH 01 - xiaohe
-  - 🇹🇭 TH 02 - xiaohe
 rules:
 - MATCH,PROXIES
