@@ -5,12 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: yZiPrr484OdSYcivDUv+UIygwvyW+HQYytKsIgTw9tU=
+  type: vless
+  server: 31.177.111.184
+  port: 443
+  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: zry9ocg43w.flowersgood.top
+  network: ws
+  ws-opts:
+    path: /static/collect/9412171e8a3a/
+    headers:
+      Host: zry9ocg43w.flowersgood.top
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: ss
   server: 185.22.153.117
@@ -20,18 +27,18 @@ proxies:
   udp: true
 - name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   type: vless
-  server: 48.102.168.5
+  server: 172.67.148.84
   port: 443
-  uuid: 7b91b2c3-8af3-449b-a555-00c9460989f4
+  uuid: 51c5a070-39ff-43fd-ac53-597bb7e7ff3d
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: lvi.su
+  servername: fast-route-4aa49d-gw.staging-api-05a87c.workers.dev
   network: ws
   ws-opts:
-    path: /vpn-relay?token=27fede42482b3c29d4c1c9640876c250&pool=whitelist2
+    path: /9dffa10cc2d3b317?ed=2560
     headers:
-      Host: lvi.su
+      Host: fast-route-4aa49d-gw.staging-api-05a87c.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
